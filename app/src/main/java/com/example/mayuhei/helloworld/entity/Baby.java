@@ -1,4 +1,4 @@
-package com.example.mayuhei.helloworld.com.example.mayuhei.helloworld.entity;
+package com.example.mayuhei.helloworld.entity;
 
 /**
  * Created by mayuhei on 2016/12/13.
@@ -8,6 +8,8 @@ public class Baby {
     private Birthday birthday;
     private Size size;
     private Gender gender;
+
+    private String name;
 
     public Birthday getBirthday() {
         return birthday;
@@ -31,6 +33,14 @@ public class Baby {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public static class Size {

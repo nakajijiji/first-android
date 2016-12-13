@@ -1,4 +1,4 @@
-package com.example.mayuhei.helloworld.com.example.mayuhei.helloworld.adapter;
+package com.example.mayuhei.helloworld.adapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.mayuhei.helloworld.R;
-import com.example.mayuhei.helloworld.com.example.mayuhei.helloworld.entity.Item;
+import com.example.mayuhei.helloworld.entity.Item;
 
 import java.io.IOException;
 import java.io.InputStream;

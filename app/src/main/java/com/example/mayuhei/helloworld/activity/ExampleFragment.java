@@ -1,4 +1,4 @@
-package com.example.mayuhei.helloworld.com.example.mayuhei.helloworld.activity;
+package com.example.mayuhei.helloworld.activity;
 
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 
 import com.example.mayuhei.helloworld.R;
-import com.example.mayuhei.helloworld.com.example.mayuhei.helloworld.adapter.CustomAdapter;
-import com.example.mayuhei.helloworld.com.example.mayuhei.helloworld.entity.Item;
+import com.example.mayuhei.helloworld.adapter.CustomAdapter;
+import com.example.mayuhei.helloworld.entity.Item;
 
 import java.util.ArrayList;
 import java.util.List;

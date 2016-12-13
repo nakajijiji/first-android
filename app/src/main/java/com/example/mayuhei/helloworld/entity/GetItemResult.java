@@ -1,4 +1,4 @@
-package com.example.mayuhei.helloworld.com.example.mayuhei.helloworld.entity;
+package com.example.mayuhei.helloworld.entity;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.mayuhei.helloworld.com.example.mayuhei.helloworld.entity;
+package com.example.mayuhei.helloworld.entity;
 
 /**
  * Created by mayuhei on 2016/12/13.
