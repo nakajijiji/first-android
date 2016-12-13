@@ -21,4 +21,9 @@ public class SubActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void click(View view){
+        Intent intent = new Intent(SubActivity.this, Sub2Activity.class);
+        startActivity(intent);
+    }
 }

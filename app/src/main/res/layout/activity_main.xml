@@ -8,18 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.mayuhei.helloworld.MainActivity">
-
-    <Button
-        android:onClick="click"
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="22dp"
-        android:layout_marginEnd="22dp"
-        android:id="@+id/button" />
+    tools:context="com.example.mayuhei.helloworld.com.example.mayuhei.helloworld.activity.MainActivity">
 
     <EditText
         android:layout_width="wrap_content"
@@ -43,13 +32,45 @@
         android:id="@+id/textView2" />
 
     <Button
+        android:onClick="click"
         android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/editText"
+        android:layout_toEndOf="@+id/editText"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:onClick="move"
         android:layout_below="@+id/textView2"
         android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText"
-        android:id="@+id/button2"
-        android:onClick="move"/>
+        android:layout_alignEnd="@+id/editText" />
+
+    <Button
+        android:text="Button"
+        android:onClick="toScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button22" />
+
+    <Button
+        android:text="Button"
+        android:onClick="toRealScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button22"
+        android:layout_alignLeft="@+id/button22"
+        android:layout_alignStart="@+id/button22"
+        android:layout_marginTop="64dp"
+        android:id="@+id/button23" />
 
 </RelativeLayout>
