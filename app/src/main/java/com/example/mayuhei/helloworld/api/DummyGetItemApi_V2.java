@@ -12,7 +12,7 @@ import java.util.List;
  * Created by mayuhei on 2016/12/13.
  */
 
-public class DummyGetItemApi implements GetItemApi {
+public class DummyGetItemApi_V2 implements GetItemApi {
     @Override
     public GetItemResult getItem(GetItemRequest request) {
         GetItemResult result = new GetItemResult();
@@ -36,15 +36,15 @@ public class DummyGetItemApi implements GetItemApi {
     private List<Item> getAllItemObject(int id){
         List<Item> items = new ArrayList<>();
         if(id == 0) {
-            items.add(new Item("AAA", "baby-sample.jpeg"));
+            items.add(new Item("AAA", "baby-sample2.jpg"));
             items.add(new Item("BBB", "baby-sample2.jpg"));
-            items.add(new Item("CCC", "baby-sample.jpeg"));
+            items.add(new Item("CCC", "baby-sample2.jpg"));
             items.add(new Item("DDD", "baby-sample2.jpg"));
-            items.add(new Item("EEE", "baby-sample.jpeg"));
+            items.add(new Item("EEE", "baby-sample2.jpg"));
             items.add(new Item("FFF", "baby-sample2.jpg"));
-            items.add(new Item("GGG", "baby-sample.jpeg"));
+            items.add(new Item("GGG", "baby-sample2.jpg"));
             items.add(new Item("HHH", "baby-sample2.jpg"));
-            items.add(new Item("III", "baby-sample.jpeg"));
+            items.add(new Item("III", "baby-sample2.jpg"));
         }else{
             items.add(new Item("AAA", "baby-sample.jpeg"));
             items.add(new Item("BBB", "baby-sample.jpeg"));

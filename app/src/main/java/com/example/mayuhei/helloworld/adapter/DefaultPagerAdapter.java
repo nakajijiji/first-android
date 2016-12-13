@@ -5,35 +5,50 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.mayuhei.helloworld.activity.ExampleFragment;
+import com.example.mayuhei.helloworld.entity.Channel;
+import com.example.mayuhei.helloworld.entity.GridResource;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by mayuhei on 2016/12/13.
  */
 
 public class DefaultPagerAdapter extends FragmentPagerAdapter {
-    private List<String> tabNameList;
+    private final GridResource resource;
+    private Map<Integer, Fragment> fragmentMap = new HashMap<>();
 
-    public DefaultPagerAdapter(FragmentManager fm, List<String> tabNameList) {
+    public DefaultPagerAdapter(FragmentManager fm, List<Channel> channels) {
         super(fm);
-        this.tabNameList = tabNameList;
+        List<GridResource> results = new ArrayList<>();
+        this.resource = new GridResource(extract(channels));
     }
 
     @Override
     public Fragment getItem(int position) {
-        return ExampleFragment.newInstance(getColor(position), position);
+        Fragment result = ExampleFragment.newInstance(getColor(position), position, resource);
+        fragmentMap.put(position, result);
+        return result;
     }
 
     @Override
     public int getCount() {
-        return tabNameList.size();
+        return resource.getIdToChannels().size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return tabNameList.get(position);
+        return resource.getIdToChannels().get(position).getName();
     }
+
+    @Override
+    public int getItemPosition(Object object) {
+        return POSITION_NONE;
+    }
+
 
     private int getColor(int position){
         int key = position%3;
@@ -48,11 +63,19 @@ public class DefaultPagerAdapter extends FragmentPagerAdapter {
         return -1;
     }
 
-    public List<String> getTabNameList() {
-        return tabNameList;
+    public void updateResource(List<Channel> channels) {
+        Map<Integer, Channel> map = extract(channels);
+        this.resource.setIdToChannel(map);
     }
 
-    public void setTabNameList(List<String> tabNameList) {
-        this.tabNameList = tabNameList;
+    private Map<Integer, Channel> extract(List<Channel> channels){
+        Map<Integer, Channel> idToChannel = new HashMap<>();
+        int i = 0;
+        for(Channel c : channels){
+            idToChannel.put(i, c);
+            i++;
+        }
+        return idToChannel;
     }
+
 }

@@ -28,11 +28,7 @@ public class UpdateTabView implements GetItemResultHandler {
     public void handle(GetItemResult result) {
         DefaultPagerAdapter adapter = (DefaultPagerAdapter)viewPager.getAdapter();
         List<Channel> channels = result.getChannels();
-        List<String> nameList = new ArrayList<>();
-        for(Channel c : channels){
-            nameList.add(c.getName());
-        }
-        adapter.setTabNameList(nameList);
+        adapter.updateResource(channels);
         adapter.notifyDataSetChanged();
         viewPager.invalidate();
     }

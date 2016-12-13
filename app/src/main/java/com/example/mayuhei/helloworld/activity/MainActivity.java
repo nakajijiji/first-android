@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import com.example.mayuhei.helloworld.R;
 import com.example.mayuhei.helloworld.adapter.DefaultPagerAdapter;
 import com.example.mayuhei.helloworld.api.DummyGetItemApi;
+import com.example.mayuhei.helloworld.api.DummyGetItemApi_V2;
 import com.example.mayuhei.helloworld.api.DummyGetItemRequest;
 import com.example.mayuhei.helloworld.api.GetItemApi;
 import com.example.mayuhei.helloworld.entity.GetItemRequest;
@@ -26,7 +27,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private SwipeRefreshLayout swipeRefreshLayout;
-    private GetItemApi getItemApi = new DummyGetItemApi();
+    private GetItemApi getItemApi = new DummyGetItemApi_V2();
     private List<GetItemResultHandler> handlers;
 
     @Override
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         FragmentManager manager = getSupportFragmentManager();
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
-        DefaultPagerAdapter adapter = new DefaultPagerAdapter(manager, Arrays.asList("服", "ズボン", "おもちゃ"));
+        DefaultPagerAdapter adapter = new DefaultPagerAdapter(manager, new DummyGetItemApi().getItem(new DummyGetItemRequest()).getChannels());
         viewPager.setAdapter(adapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
