@@ -23,5 +23,6 @@ public class DummyGetItemRequest extends GetItemRequest{
         Baby.Size size = new Baby.Size();
         size.setValue(86);
         size.setTimestamp(0);
+        this.setBaby(baby);
     }
 }

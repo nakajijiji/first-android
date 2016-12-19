@@ -11,18 +11,13 @@ import android.widget.GridView;
 
 import com.example.mayuhei.helloworld.R;
 import com.example.mayuhei.helloworld.adapter.CustomAdapter;
-import com.example.mayuhei.helloworld.entity.Channel;
 import com.example.mayuhei.helloworld.entity.GridResource;
-import com.example.mayuhei.helloworld.entity.Item;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by mayuhei on 2016/12/09.
  */
 
-public class ExampleFragment extends Fragment {
+public class ItemViewFragment extends Fragment {
     private final static String BACKGROUND_COLOR = "background_color";
     private final static String FRAGMENT_ID = "fragment_id";
     private final static String GRID_RESOURCE = "grid_resource";
@@ -30,7 +25,7 @@ public class ExampleFragment extends Fragment {
     private GridResource resource;
 
     public static Fragment newInstance(@ColorRes int IdRes, int id, GridResource resource) {
-        ExampleFragment result = new ExampleFragment();
+        ItemViewFragment result = new ItemViewFragment();
         Bundle b = new Bundle();
         b.putInt(BACKGROUND_COLOR, IdRes);
         b.putInt(FRAGMENT_ID, id);

@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.mayuhei.helloworld.activity.ExampleFragment;
+import com.example.mayuhei.helloworld.activity.ItemViewFragment;
 import com.example.mayuhei.helloworld.entity.Channel;
 import com.example.mayuhei.helloworld.entity.GridResource;
 
@@ -29,7 +29,7 @@ public class DefaultPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        Fragment result = ExampleFragment.newInstance(getColor(position), position, resource);
+        Fragment result = ItemViewFragment.newInstance(getColor(position), position, resource);
         fragmentMap.put(position, result);
         return result;
     }

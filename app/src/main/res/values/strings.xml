@@ -1,7 +1,16 @@
 <resources>
-    <string name="app_name">HelloWorld</string>
+    <string name="app_name">Osagari</string>
     <string name="title_activity_scroll">ScrollActivity</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="intro_baby_name">お子様のお名前</string>
+    <string name="intro_baby_birth">お子様の誕生日</string>
+    <string name="intro_baby_gender">お子様の性別</string>
+    <string name="intro_baby_gender_male">男の子</string>
+    <string name="intro_baby_gender_female">女の子</string>
+    <string name="intro_baby_height">お子様の身長</string>
+    <string name="intro_baby_cm">cm</string>
+    <string name="intro_send">送信</string>
 </resources>
